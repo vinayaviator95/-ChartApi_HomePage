@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
   <script src="https://kit.fontawesome.com/db893102d7.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -136,25 +137,25 @@
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Where Does My Money Do</span><i
             class="fas fa-expand"></i></div>
-        <hr style="margin: 10px;">
+        <hr style="margin:0px;">
       </div>
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo rowtwo_third">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Power Consumption</span><i
             class="fas fa-expand"></i></div>
-        <hr style="margin: 10px;">
+        <hr style="margin:0px;">
         <div class="rowtwo_third-canvasdiv"><canvas id="rowtwo_third"></canvas></div>
       </div>
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Change in Cost</span><span><i class="fas fa-undo"
               style="
               margin-right: 5px;"></i><i class="fas fa-expand"></i></div></span>
-        <hr style="margin: 10px;">
+        <hr style="margin:0px;">
         <div class="rowtwo_forth-canvasdiv"><canvas id="rowtwo_forth"></canvas></div>
       </div>
     </div>
     <div class="row row4">
       <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 days cardthree">
-        <div class="ccheading-div mx-2"> <span class="ccheading">Last 30 Days(Kwh)</span> <span>
+        <div class="ccheading-div row3 my-2"> <span class="ccheading">Last 30 Days(Kwh)</span> <span>
             <select class="cc-select" aria-label="Default select example">
               <option selected>Jan</option>
               <option value="1">Feb</option>
@@ -177,11 +178,11 @@
             <i class="fas fa-expand"></i>
           </span>
         </div>
-        <hr style="margin: 10px;">
+        <hr style="margin:0px;">
         <div class="day-canvasdiv"><canvas id="day"></canvas></div>
       </div>
       <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 months cardthree">
-        <div class="ccheading-div mx-2"> <span class="ccheading">Last 12 Months(KWH)</span> <span><select
+        <div class="ccheading-div row3 my-2"> <span class="ccheading">Last 12 Months(KWH)</span> <span><select
               class="cc-select" aria-label="Default select example">
               <option selected>2021</option>
               <option value="1">2020</option>
@@ -191,11 +192,11 @@
             <i class="fas fa-expand"></i>
           </span>
         </div>
-        <hr style="margin: 10px;">
+        <hr style="margin:0px;">
         <div class="months-canvasdiv"><canvas id="months"></canvas></div>
       </div>
       <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 harmonics cardthree">
-        <div class="ccheading-div mx-2"> <span class="ccheading">Harmonics</span> <span><select class="cc-select"
+        <div class="ccheading-div row3 my-2"> <span class="ccheading">Harmonics</span> <span><select class="cc-select"
               aria-label="Default select example">
               <option selected>Jan</option>
               <option value="1">Feb</option>
@@ -216,12 +217,13 @@
               <option value="3">2018</option>
             </select>
           </span> </div>
-        <hr style="margin: 10px;">
+        <hr style="margin:0px;">
 
-        <div class="d-flex justify-content-around align-items-center" >
+        <div class="d-flex justify-content-around align-items-center pie-canvasdiv" >
          
           <div class="piechart_div">
             <div class="center_text">Current</div>
+
             <canvas class="" id="tag1"></canvas>
           </div>   
         

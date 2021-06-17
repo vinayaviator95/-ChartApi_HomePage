@@ -288,6 +288,9 @@ h4 {
 .months-canvasdiv {
   height: 14rem;
 }
+.pie-canvasdiv{
+  height: 14rem;
+}
 .cc-select {
   font-size: 0.8rem;
   color: white;
