@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Drop Down Sidebar Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Boxiocns CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <script src="https://kit.fontawesome.com/db893102d7.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+  <!--mobile navigation bar start-->
+  <div class="mobile_nav">
+    <div class="nav_bar">
+      <i class="fa fa-bars nav_btn"></i>
+      <span style="position:relative;color: white; font-size: 2rem;">Energy Management System</span>
+    </div>
+    <div class="mobile_nav_items">
+      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="#"><i class='bx bx-grid-alt'></i><span>Meter Page</span></a>
+      <a href="#"><i class="fas fa-users"></i><span>Meters List</span></a>
+      <a href="#"><i class="fas fa-th"></i><span>User Management</span></a>
+      <div class="d-flex justify-content-center align-items-center text-white">
+        <div class="p-2"><select class="cc-select" aria-label="Default select example">
+          <option selected>meter-01 <i class="bi bi-caret-down-fill"></i></option>
+          <option value="1">meter-02</option>
+          <option value="2">meter-03</option>
+        </select></div>
+        <div class="p-2"><a href="#contact">Log Out</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">EMS V10.01</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class="fas fa-tachometer-alt"></i>
+            <span class="link_name">Meter Page</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class="fas fa-cogs"></i>
+            <span class="link_name">Meters List</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-users"></i>
+          <span class="link_name">User Management</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu'></i>
+      <span class="text">Energy Management System</span>
+      <span class="header-div">
+        <ul class="float-end header_ul">
+          <li class="header_li"><a href="#contact">Log Out</a></li>
+          <li class="header_li"><a href="#news">Meters</a></li>
+          <li class="header_li"><a href="#home">Dashboard</a></li>
+          <li class="header_li"><select class="cc-select" aria-label="Default select example">
+              <option selected>meter-01 <i class="bi bi-caret-down-fill"></i></option>
+              <option value="1">meter-02</option>
+              <option value="2">meter-03</option>
+            </select></li>
+        </ul>
+      </span>
+    </div>
+  </section>
+  <div class="main-section">
+
+    <div class="row row2 mt-2">
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardone rowone_first">
+        <div class="row2_text">
+          <span>Today,s Energy Consumption</span>
+          <span class="row2_textspan">0 kWh</span>
+           </div>
+      </div>
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardone rowone_second">
+        <div class="row2_text">
+          <span>Today,s Power Consumption</span>
+          <span class="row2_textspan">0 kWh</span>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardone rowone_third">
+        <div class="row2_text">
+          <span>Power Factor of this Month</span>
+          <span class="row2_textspan">0 kWh</span>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardone rowone_forth">
+        <div class="row2_text" style="line-height: normal;">
+          <span>Daily Energy Consumption</span>
+          <span class="row2_textspan">1439.99 kWh</span>
+          <span>Monthly Energy Consumption</span>
+          <span class="row2_textspan">1721.07 kWh</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row3 my-2">
+
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
+        <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Usage Estimate Graph</span>
+          <span><i class="fas fa-undo" style="
+                    margin-right: 5px;
+                "></i><i class="fas fa-expand"></i></span>
+        </div>
+        <hr style="margin: 0;">
+        <div class="rowtwo_first-canvasdiv"><canvas id="rowtwo_first"></canvas></div>
+      </div>
+
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
+        <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Where Does My Money Do</span><i
+            class="fas fa-expand"></i></div>
+        <hr style="margin: 10px;">
+      </div>
+
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo rowtwo_third">
+        <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Power Consumption</span><i
+            class="fas fa-expand"></i></div>
+        <hr style="margin: 10px;">
+        <div class="rowtwo_third-canvasdiv"><canvas id="rowtwo_third"></canvas></div>
+      </div>
+
+      <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
+        <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Change in Cost</span><span><i class="fas fa-undo"
+              style="
+              margin-right: 5px;"></i><i class="fas fa-expand"></i></div></span>
+        <hr style="margin: 10px;">
+        <div class="rowtwo_forth-canvasdiv"><canvas id="rowtwo_forth"></canvas></div>
+
+      </div>
+    </div>
+
+    <div class="row row4">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 days cardthree">
+        <div class="ccheading-div mx-2"> <span class="ccheading">Last 30 Days(Kwh)</span> <span>
+            <select class="cc-select" aria-label="Default select example">
+              <option selected>Jan</option>
+              <option value="1">Feb</option>
+              <option value="2">Mar</option>
+              <option value="3">Apr</option>
+              <option value="4">May</option>
+              <option value="5">Jun</option>
+              <option value="6">Jul</option>
+              <option value="7">Aug</option>
+              <option value="8">Sep</option>
+              <option value="9">Oct</option>
+              <option value="10">Nov</option>
+              <option value="11">Dec</option>
+            </select> <select class="cc-select" aria-label="Default select example">
+              <option selected>2021</option>
+              <option value="1">2020</option>
+              <option value="2">2019</option>
+              <option value="3">2018</option>
+            </select>
+            <i class="fas fa-expand"></i>
+          </span>
+        </div>
+        <hr style="margin: 10px;">
+        <div class="day-canvasdiv"><canvas id="day"></canvas></div>
+      </div>
+
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 months cardthree">
+        <div class="ccheading-div mx-2"> <span class="ccheading">Last 12 Months(KWH)</span> <span><select
+              class="cc-select" aria-label="Default select example">
+              <option selected>2021</option>
+              <option value="1">2020</option>
+              <option value="2">2019</option>
+              <option value="3">2018</option>
+            </select>
+            <i class="fas fa-expand"></i>
+          </span>
+        </div>
+        <hr style="margin: 10px;">
+        <div class="months-canvasdiv"><canvas id="months"></canvas></div>
+      </div>
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 harmonics cardthree">
+        <div class="ccheading-div mx-2"> <span class="ccheading">Harmonics</span> <span><select class="cc-select"
+              aria-label="Default select example">
+              <option selected>Jan</option>
+              <option value="1">Feb</option>
+              <option value="2">Mar</option>
+              <option value="3">Apr</option>
+              <option value="4">May</option>
+              <option value="5">Jun</option>
+              <option value="6">Jul</option>
+              <option value="7">Aug</option>
+              <option value="8">Sep</option>
+              <option value="9">Oct</option>
+              <option value="10">Nov</option>
+              <option value="11">Dec</option>
+            </select> <select class="cc-select" aria-label="Default select example">
+              <option selected>2021</option>
+              <option value="1">2020</option>
+              <option value="2">2019</option>
+              <option value="3">2018</option>
+            </select>
+
+          </span> </div>
+        <hr style="margin: 10px;">
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle("showMenu");
+      });
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.nav_btn').click(function () {
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
