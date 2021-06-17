@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="UTF-8">
-  <title> Drop Down Sidebar Menu</title>
+  <title>Home Page</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Boxiocns CDN Link -->
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,10 +13,7 @@
   <script src="https://kit.fontawesome.com/db893102d7.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 </head>
-
 <body>
-
-
   <!--mobile navigation bar start-->
   <div class="mobile_nav">
     <div class="nav_bar">
@@ -41,6 +35,8 @@
       </div>
     </div>
   </div>
+  <!--mobile navigation bar Ends-->
+<!--   sidebar start -->
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
@@ -77,7 +73,7 @@
       </li>
     </ul>
   </div>
-
+<!--   sidebar Ends -->
 
   <section class="home-section">
     <div class="home-content">
@@ -97,8 +93,8 @@
       </span>
     </div>
   </section>
-  <div class="main-section">
 
+  <div class="main-section">
     <div class="row row2 mt-2">
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardone rowone_first">
         <div class="row2_text">
@@ -127,9 +123,7 @@
         </div>
       </div>
     </div>
-
     <div class="row row3 my-2">
-
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Usage Estimate Graph</span>
           <span><i class="fas fa-undo" style="
@@ -139,30 +133,25 @@
         <hr style="margin: 0;">
         <div class="rowtwo_first-canvasdiv"><canvas id="rowtwo_first"></canvas></div>
       </div>
-
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Where Does My Money Do</span><i
             class="fas fa-expand"></i></div>
         <hr style="margin: 10px;">
       </div>
-
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo rowtwo_third">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Power Consumption</span><i
             class="fas fa-expand"></i></div>
         <hr style="margin: 10px;">
         <div class="rowtwo_third-canvasdiv"><canvas id="rowtwo_third"></canvas></div>
       </div>
-
       <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 cardtwo">
         <div class="ccheading-div mx-2 my-2"> <span class="ccheading">Change in Cost</span><span><i class="fas fa-undo"
               style="
               margin-right: 5px;"></i><i class="fas fa-expand"></i></div></span>
         <hr style="margin: 10px;">
         <div class="rowtwo_forth-canvasdiv"><canvas id="rowtwo_forth"></canvas></div>
-
       </div>
     </div>
-
     <div class="row row4">
       <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 days cardthree">
         <div class="ccheading-div mx-2"> <span class="ccheading">Last 30 Days(Kwh)</span> <span>
@@ -191,7 +180,6 @@
         <hr style="margin: 10px;">
         <div class="day-canvasdiv"><canvas id="day"></canvas></div>
       </div>
-
       <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 months cardthree">
         <div class="ccheading-div mx-2"> <span class="ccheading">Last 12 Months(KWH)</span> <span><select
               class="cc-select" aria-label="Default select example">
@@ -227,15 +215,29 @@
               <option value="2">2019</option>
               <option value="3">2018</option>
             </select>
-
           </span> </div>
         <hr style="margin: 10px;">
+
+        <div class="d-flex justify-content-around align-items-center" >
+         
+          <div class="piechart_div">
+            <div class="center_text">Current</div>
+            <canvas class="" id="tag1"></canvas>
+          </div>   
+        
+          <div class="piechart_div">
+            <div class="center_text">Voltage</div>
+            <canvas class="" id="tag2"></canvas>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
   </div>
 
   <script>
-
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
@@ -243,7 +245,6 @@
         arrowParent.classList.toggle("showMenu");
       });
     }
-
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".bx-menu");
     console.log(sidebarBtn);
@@ -251,7 +252,6 @@
       sidebar.classList.toggle("close");
     });
   </script>
-
   <script type="text/javascript">
     $(document).ready(function () {
       $('.nav_btn').click(function () {

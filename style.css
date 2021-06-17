@@ -66,7 +66,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover {
-  background: #1d1b31;
+  background: #3366cc;
 }
 .sidebar .nav-links li .iocn-link {
   display: flex;
@@ -202,11 +202,9 @@
   left: 78px;
   width: calc(100% - 78px);
 }
-
 .mobile_nav {
   display: none;
 }
-
 .row2 {
   margin-left: 0;
   margin-right: 0;
@@ -214,14 +212,12 @@
   justify-content: center;
   align-items: center;
 }
-
 .cardone {
   border-radius: 0.5rem;
   height: 6rem;
   padding-left: 0px;
   padding-right: 0px;
 }
-
 .row2_text {
   line-height: normal;
   display: flex;
@@ -229,16 +225,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.row2_textspan{
+.row2_textspan {
   font-size: 1.2rem;
 }
 h6,
 h4 {
   margin: 0 !important;
 }
-
 .rowone_first {
   background-color: #17a2b8;
   color: white;
@@ -255,27 +250,23 @@ h4 {
   color: black;
   background-color: #ffc107;
 }
-
 .row3 {
   margin-left: 0;
   margin-right: 0;
-  /* height:17rem; */
+
   background-color: white;
 }
-
 .cardthree {
-  border-top-style:solid;
-  /* border: 1px solid #17a2b8; */
+  /* border-top-style: solid; */
+  border: 1px solid #17a2b8;
   border-radius: 0.5rem;
-  height: 16.5rem;
+  height: 17rem;
 }
-
 .cardtwo {
   border: 1px solid #17a2b8;
   border-radius: 0.5rem;
-  height: 16.5rem;
+  height:17rem;
 }
-
 .row4 {
   margin-left: 0;
   margin-right: 0;
@@ -297,7 +288,6 @@ h4 {
 .months-canvasdiv {
   height: 14rem;
 }
-
 .cc-select {
   font-size: 0.8rem;
   color: white;
@@ -308,14 +298,12 @@ h4 {
 .ccheading {
   font-size: 0.8rem;
 }
-
 .ccheading-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.header_ul{
+.header_ul {
   font-size: 0.8rem;
   list-style-type: none;
   margin: 0;
@@ -324,12 +312,9 @@ h4 {
   margin-bottom: 0px !important;
   padding-left: 0px !important;
 }
-
-
-.header_li{
+.header_li {
   float: right;
 }
-
 .header_li a {
   display: inline-block;
   color: white;
@@ -339,23 +324,25 @@ h4 {
 }
 
 
+.piechart_div {
+  height: 7rem;
+  width: 7rem;
+  position: relative;
+}
 
+.center_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .8rem;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* Responsive CSS */
 @media screen and (max-width: 800px) {
   .sidebar {
     display: none;
   }
-
   .header {
     display: none;
   }
@@ -370,22 +357,18 @@ h4 {
     width: 100%;
     transition: all 0.5s ease;
   }
-  
   .content {
     margin-left: 0;
     margin-top: 0;
     transition: 0s;
   }
-
   #check:checked ~ .content {
     margin-left: 0;
   }
-
   .mobile_nav {
     display: block;
     width: calc(100% - 0%);
   }
-
   .nav_bar {
     background: #3366cc;
     width: (100% - 0px);
@@ -396,7 +379,6 @@ h4 {
     align-items: center;
     padding: 10px 20px;
   }
-
   .nav_bar .nav_btn {
     color: #fff;
     font-size: 22px;
@@ -404,12 +386,10 @@ h4 {
     transition: 0.5s;
     transition-property: color;
   }
-
   .mobile_nav_items {
     background: #3366cc;
     display: none;
   }
-
   .mobile_nav_items a {
     color: #fff;
     display: block;
@@ -421,11 +401,9 @@ h4 {
     transition: 0.5s;
     transition-property: background;
   }
-
   .mobile_nav_items i {
     padding-right: 10px;
   }
-
   .active {
     display: block;
   }

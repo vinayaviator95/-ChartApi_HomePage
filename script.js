@@ -137,11 +137,11 @@ let rowtwo_firstChart = new Chart(rowtwo_first, {
         display: true,
         position: "top",
         labels: {
-            // This more specific font property overrides the global property
-            font: {
-                size: 8
-            }
-        }
+          // This more specific font property overrides the global property
+          font: {
+            size: 8,
+          },
+        },
       },
       title: {
         display: false,
@@ -286,7 +286,7 @@ let rowtwo_forthChart = new Chart(rowtwo_forth, {
           "#feb56c",
         ],
         backgroundColor: [
-       "#ff99ae",
+          "#ff99ae",
           "#7dc0ee",
           "#ffe096",
           "#8cd5d5",
@@ -304,11 +304,11 @@ let rowtwo_forthChart = new Chart(rowtwo_forth, {
         display: true,
         position: "top",
         labels: {
-            // This more specific font property overrides the global property
-            font: {
-                size: 8
-            }
-        }
+          // This more specific font property overrides the global property
+          font: {
+            size: 8,
+          },
+        },
       },
       title: {
         display: false,
@@ -327,7 +327,6 @@ let rowtwo_forthChart = new Chart(rowtwo_forth, {
   },
 });
 
-
 const months = document.getElementById("months").getContext("2d");
 
 let monthsCharts = new Chart(months, {
@@ -337,11 +336,9 @@ let monthsCharts = new Chart(months, {
     datasets: [
       {
         label: "",
-        data: [0.3,7.8,5.6,5.4,4.2,6,2],
+        data: [0.3, 7.8, 5.6, 5.4, 4.2, 6, 2],
         borderColor: ["#ff751a"],
-        backgroundColor: [
-          "#ff751a"
-        ],
+        backgroundColor: ["#ff751a"],
       },
     ],
   },
@@ -376,8 +373,8 @@ let monthsCharts = new Chart(months, {
           display: true,
           text: "Power",
         },
-        min: 0.00,
-        max: 10.00,
+        min: 0.0,
+        max: 10.0,
         ticks: {
           callback: function (value, index, values) {
             return value + " KWh";
@@ -386,6 +383,62 @@ let monthsCharts = new Chart(months, {
         grid: {
           display: true,
         },
+      },
+    },
+  },
+});
+
+
+const tagone = document.getElementById("tag1").getContext("2d");
+let tagonechart = new Chart(tag1, {
+  type: "doughnut",
+  data: {
+    labels: ["c1", "c2"],
+    datasets: [
+      {
+        label: "Current",
+        data: [90,30],
+        backgroundColor:  ['#4c84ff',"#e6e6e6"],
+        borderColor: ['#4c84ff',"#e6e6e6"]
+      },
+    ],
+  },
+  options: {
+    cutout: "70%",
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+        position: "top",
+      },
+    },
+  },
+});
+
+
+const tagtwo = document.getElementById("tag2").getContext("2d");
+let tagtwochart = new Chart(tag2, {
+  type: "doughnut",
+  data: {
+    labels: ["v1", "v2"],
+    datasets: [
+      {
+        label: "Voltage",
+        data: [1,30],
+        backgroundColor:  ["#e6e6e6",'#fec402'],
+        borderColor: ["#e6e6e6",'#fec402']
+      },
+    ],
+  },
+  options: {
+    cutout: "70%",
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+        position: "top",
       },
     },
   },
