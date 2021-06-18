@@ -86,7 +86,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .sidebar .nav-links li a {
   display: flex;
   align-items: center;
@@ -148,7 +147,6 @@
   opacity: 1;
   display: block;
 }
-
 .sidebar .profile-details {
   position: fixed;
   bottom: 0;
@@ -176,6 +174,7 @@
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
@@ -187,10 +186,9 @@
   cursor: pointer;
 }
 .home-section .home-content .text {
-  font-size: 26px;
+  font-size: 1rem;
   font-weight: 600;
 }
-
 .main-section {
   position: relative;
   height: 100%;
@@ -203,6 +201,9 @@
   width: calc(100% - 78px);
 }
 .mobile_nav {
+  display: none;
+}
+.mobile_navbar {
   display: none;
 }
 .row2 {
@@ -265,19 +266,18 @@ h4 {
 .cardtwo {
   border: 1px solid #17a2b8;
   border-radius: 0.5rem;
-  height:17rem;
+  height: 17rem;
 }
 .row4 {
   margin-left: 0;
   margin-right: 0;
   /* height:17rem; */
 }
-
 .rowtwo_first-canvasdiv {
   height: 14rem;
 }
 .rowtwo_third-canvasdiv {
-  height: 13rem;
+  height: 14.5rem;
 }
 .rowtwo_forth-canvasdiv {
   height: 13rem;
@@ -288,7 +288,7 @@ h4 {
 .months-canvasdiv {
   height: 14rem;
 }
-.pie-canvasdiv{
+.pie-canvasdiv {
   height: 14rem;
 }
 .cc-select {
@@ -325,23 +325,32 @@ h4 {
   padding: 0.2rem 0.5rem;
   text-decoration: none;
 }
-
-
 .piechart_div {
   height: 7rem;
   width: 7rem;
   position: relative;
 }
-.center_text{
+.center_text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: .8rem;
+  font-size: 0.8rem;
+}
+
+.select_heading {
+  font-size: 0.8rem;
+  color: black;
+  background-color: white;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
 }
 
 /* Responsive CSS */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  .mobile_navbar {
+    display: block;
+  }
   .sidebar {
     display: none;
   }
@@ -351,35 +360,68 @@ h4 {
   .home-section {
     display: none;
   }
+  .sidenav {
+    height: 100%;
+    width: 40%;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      rgba(0, 91, 234, 255),
+      rgba(0, 198, 251, 255)
+    );
+    overflow-x: hidden;
+    transition: 0.2s ease;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    background: #3366cc;
+  }
   .main-section {
-    position: relative;
+    position: block;
     left: 0px;
     width: calc(100% - 0);
     height: 100%;
     width: 100%;
     transition: all 0.5s ease;
   }
-  .content {
-    margin-left: 0;
-    margin-top: 0;
-    transition: 0s;
+
+  .sidenav .closebtn {
+    font-size: 22px;
+    color: white;
   }
-  #check:checked ~ .content {
-    margin-left: 0;
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
   }
-  .mobile_nav {
-    display: block;
-    width: calc(100% - 0%);
+  .mobile_header {
+    background: #3366cc;
+    color: white;
   }
   .nav_bar {
     background: #3366cc;
+    color: white;
     width: (100% - 0px);
-    /* margin-top:70px; */
     margin-top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    height: 60px;
+    /* padding: 10px 20px; */
   }
   .nav_bar .nav_btn {
     color: #fff;
@@ -388,25 +430,10 @@ h4 {
     transition: 0.5s;
     transition-property: color;
   }
-  .mobile_nav_items {
-    background: #3366cc;
-    display: none;
+  .sidenav a span {
+    font-size: 1rem;
   }
-  .mobile_nav_items a {
-    color: #fff;
-    display: block;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 60px;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition: 0.5s;
-    transition-property: background;
-  }
-  .mobile_nav_items i {
-    padding-right: 10px;
-  }
-  .active {
-    display: block;
+  .mobile_logo {
+    font-size: 1.5rem;
   }
 }

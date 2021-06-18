@@ -388,7 +388,6 @@ let monthsCharts = new Chart(months, {
   },
 });
 
-
 const tagone = document.getElementById("tag1").getContext("2d");
 let tagonechart = new Chart(tag1, {
   type: "doughnut",
@@ -397,9 +396,36 @@ let tagonechart = new Chart(tag1, {
     datasets: [
       {
         label: "Current",
-        data: [90,30],
-        backgroundColor:  ['#4c84ff',"#e6e6e6"],
-        borderColor: ['#4c84ff',"#e6e6e6"]
+        data: [90, 30],
+        backgroundColor: ["#4c84ff", "#e6e6e6"],
+        borderColor: ["#4c84ff", "#e6e6e6"],
+      },
+    ],
+  },
+  options: {
+    cutout: "70%",
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+        position: "top",
+      },
+    },
+  },
+});
+
+const tagtwo = document.getElementById("tag2").getContext("2d");
+let tagtwochart = new Chart(tag2, {
+  type: "doughnut",
+  data: {
+    labels: ["v1", "v2"],
+    datasets: [
+      {
+        label: "Voltage",
+        data: [1, 30],
+        backgroundColor: ["#e6e6e6", "#fec402"],
+        borderColor: ["#e6e6e6", "#fec402"],
       },
     ],
   },
@@ -417,29 +443,24 @@ let tagonechart = new Chart(tag1, {
 });
 
 
-const tagtwo = document.getElementById("tag2").getContext("2d");
-let tagtwochart = new Chart(tag2, {
-  type: "doughnut",
-  data: {
-    labels: ["v1", "v2"],
-    datasets: [
-      {
-        label: "Voltage",
-        data: [1,30],
-        backgroundColor:  ["#e6e6e6",'#fec402'],
-        borderColor: ["#e6e6e6",'#fec402']
-      },
-    ],
-  },
-  options: {
-    cutout: "70%",
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: false,
-        position: "top",
-      },
-    },
-  },
+function openNav() {
+  document.getElementById("mySidenav").style.width = "60%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+let arrow = document.querySelectorAll(".arrow");
+for (var i = 0; i < arrow.length; i++) {
+  arrow[i].addEventListener("click", (e) => {
+    let arrowParent = e.target.parentElement.parentElement;
+    arrowParent.classList.toggle("showMenu");
+  });
+}
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".bx-menu");
+console.log(sidebarBtn);
+sidebarBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
 });
