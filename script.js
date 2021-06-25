@@ -1,6 +1,8 @@
-const day = document.getElementById("day").getContext("2d");
+const day = document.querySelectorAll("#day")
+for (let i = 0; i < day.length; i++) {
+    const element = day[i].getContext("2d");
 
-let dayChart = new Chart(day, {
+let dayChart = new Chart(element, {
   type: "line",
   data: {
     labels: [
@@ -100,69 +102,73 @@ let dayChart = new Chart(day, {
     },
   },
 });
-
-const rowtwo_first = document.getElementById("rowtwo_first").getContext("2d");
-
-let rowtwo_firstChart = new Chart(rowtwo_first, {
-  type: "bar",
-  data: {
-    labels: [1, 2, 3, 4],
-    datasets: [
-      {
-        label: "Active Power",
-        data: [10, 29, 37, 48],
-        tension: 0.4,
-        borderColor: "#9999ff",
-        backgroundColor: "#9999ff",
-      },
-      {
-        label: "Reactive Power",
-        data: [0, 6, 7, 8],
-        borderColor: " #66ccff",
-        backgroundColor: " #66ccff",
-      },
-      {
-        label: "Apparent Power",
-        data: [9, 10, 11, 12],
-        borderColor: "#ff9933",
-        backgroundColor: "#ff9933",
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: true,
-        position: "top",
-        labels: {
-          // This more specific font property overrides the global property
-          font: {
-            size: 8,
+}
+const rowtwo_first = document.querySelectorAll("#rowtwo_first")
+for (let i = 0; i < rowtwo_first.length; i++) {
+    const element = rowtwo_first[i].getContext("2d");
+    let rowtwo_firstChart = new Chart(element, {
+        type: "bar",
+        data: {
+          labels: [1, 2, 3, 4],
+          datasets: [
+            {
+              label: "Active Power",
+              data: [10, 29, 37, 48],
+              tension: 0.4,
+              borderColor: "#9999ff",
+              backgroundColor: "#9999ff",
+            },
+            {
+              label: "Reactive Power",
+              data: [0, 6, 7, 8],
+              borderColor: " #66ccff",
+              backgroundColor: " #66ccff",
+            },
+            {
+              label: "Apparent Power",
+              data: [9, 10, 11, 12],
+              borderColor: "#ff9933",
+              backgroundColor: "#ff9933",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+              labels: {
+                // This more specific font property overrides the global property
+                font: {
+                  size: 8,
+                },
+              },
+            },
+            title: {
+              display: false,
+              text: "Avg. Temperature vs Current",
+              font: {
+                size: 22,
+              },
+            },
+          },
+          scales: {
+            y: {
+              min: 5,
+              max: 50,
+            },
           },
         },
-      },
-      title: {
-        display: false,
-        text: "Avg. Temperature vs Current",
-        font: {
-          size: 22,
-        },
-      },
-    },
-    scales: {
-      y: {
-        min: 5,
-        max: 50,
-      },
-    },
-  },
-});
+      });
+}
 
-const rowtwo_third = document.getElementById("rowtwo_third").getContext("2d");
 
-let rowtwo_thirdChart = new Chart(rowtwo_third, {
+const rowtwo_third = document.querySelectorAll("#rowtwo_third")
+for (let i = 0; i < rowtwo_third.length; i++) {
+    const element = rowtwo_third[i].getContext("2d");
+let rowtwo_thirdChart = new Chart(element, {
   type: "line",
   data: {
     labels: [
@@ -266,10 +272,15 @@ let rowtwo_thirdChart = new Chart(rowtwo_third, {
     },
   },
 });
+}
 
-const rowtwo_forth = document.getElementById("rowtwo_forth").getContext("2d");
 
-let rowtwo_forthChart = new Chart(rowtwo_forth, {
+const rowtwo_forth = document.querySelectorAll("#rowtwo_forth")
+for (let i = 0; i < rowtwo_forth.length; i++) {
+    const element = rowtwo_forth[i].getContext("2d");
+    
+
+let rowtwo_forthChart = new Chart(element, {
   type: "bar",
   data: {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -327,9 +338,15 @@ let rowtwo_forthChart = new Chart(rowtwo_forth, {
   },
 });
 
-const months = document.getElementById("months").getContext("2d");
+}
 
-let monthsCharts = new Chart(months, {
+
+const months = document.querySelectorAll("#months")
+for (let i = 0; i < months.length; i++) {
+    const element = months[i].getContext("2d");
+    
+
+let monthsCharts = new Chart(element, {
   type: "bar",
   data: {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -387,6 +404,7 @@ let monthsCharts = new Chart(months, {
     },
   },
 });
+}
 
 const tagone = document.getElementById("tag1").getContext("2d");
 let tagonechart = new Chart(tag1, {
@@ -464,3 +482,96 @@ console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
+
+
+
+// // MODAL
+
+
+
+// const rowtwo_forth = document.querySelectorAll("#rowtwo_forth")
+
+// for (let i = 0; i < rowtwo_forth.length; i++) {
+//     const element = rowtwo_forth[i].context();
+//     let rowtwo_forthChart = new Chart(element, {
+//         type: "bar",
+//         data: {
+//           labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+//           datasets: [
+//             {
+//               label: "change in cost",
+//               data: [12, 19, 3, 5, 2, 3],
+//               borderColor: [
+//                 "#ff99ae",
+//                 "#7dc0ee",
+//                 "#ffe096",
+//                 "#8cd5d5",
+//                 "#c8acfd",
+//                 "#feb56c",
+//               ],
+//               backgroundColor: [
+//                 "#ff99ae",
+//                 "#7dc0ee",
+//                 "#ffe096",
+//                 "#8cd5d5",
+//                 "#c8acfd",
+//                 "#feb56c",
+//               ],
+//             },
+//           ],
+//         },
+//         options: {
+//           responsive: true,
+//           maintainAspectRatio: false,
+//           plugins: {
+//             legend: {
+//               display: true,
+//               position: "top",
+//               labels: {
+//                 // This more specific font property overrides the global property
+//                 font: {
+//                   size: 8,
+//                 },
+//               },
+//             },
+//             title: {
+//               display: false,
+//               text: "Avg. Temperature vs Current",
+//               font: {
+//                 size: 22,
+//               },
+//             },
+//           },
+//           scales: {
+//             y: {
+//               min: 0,
+//               max: 20,
+//             },
+//           },
+//         },
+//       });
+// }
+
+
+// // MODAL
+
+
+// const asd= document.querySelector(".asd")
+// const max_icon= document.querySelector("#max")
+
+// const sidebar1= document.querySelector(".sidebar")
+// max_icon.addEventListener("click", ()=>{asd.classList.toggle("enlargeing")
+// })
+
+
+
+// // var a = document.getElementsByTagName("BODY")[0];
+
+// // a.addEventListener("click", (e)=>{
+// //   console.log(e)
+// //   })
+  
+// // function abc(e, classname) {
+// //   document.getElementsByClassName(classname)[0];
+// // }
+

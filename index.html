@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Home Page</title>
@@ -26,10 +25,14 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       charset="utf-8"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
-
   <body>
-    <!--mobile navigation bar start-->
     <div class="mobile_navbar">
       <div class="nav_bar">
         <div class="col-2 p-0 m-0 text-center" onclick="openNav()">
@@ -192,7 +195,10 @@
               <span class="ccheading">Usage Estimate Graph</span>
               <span
                 ><i class="fas fa-undo" style="margin-right: 5px"></i
-                ><i class="fas fa-expand"></i
+                ><i  type="button"
+             
+                data-toggle="modal"
+                data-target="#myModal" class="fas fa-expand"></i
               ></span>
             </div>
             <hr style="margin: 0" />
@@ -200,14 +206,90 @@
               <canvas id="rowtwo_first"></canvas>
             </div>
           </div>
+
+          <!-- MODAL -->
+
+          <div class="container">
+            <!-- Button to Open the Modal -->
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Usage Estimate Graph</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <canvas id="rowtwo_first"></canvas>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 p-0 m-0">
+
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 p-0 m-0 xx">
           <div class="cardtwo mt-2 mx-1">
             <div class="ccheading-div mx-2 my-2">
               <span class="ccheading">Where Does My Money Do</span
-              ><i class="fas fa-expand"></i>
+              ><i  type="button"
+             
+              data-toggle="modal"
+              data-target="#myModal2" class="fas fa-expand"></i>
             </div>
             <hr style="margin: 0px" />
+          </div>
+          <!-- MODAL -->
+          <div class="container">
+            <!-- Button to Open the Modal -->
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal2">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Where Does My Money Do</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                  <div class="cardtwo">
+
+                  </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -215,31 +297,114 @@
           <div class="cardtwo mt-2 mx-1">
             <div class="ccheading-div mx-2 my-2">
               <span class="ccheading">Power Consumption</span
-              ><i class="fas fa-expand"></i>
+              ><i type="button"
+             
+              data-toggle="modal"
+              data-target="#myModal3" class="fas fa-expand"></i>
             </div>
             <hr style="margin: 0px" />
             <div class="rowtwo_third-canvasdiv">
               <canvas id="rowtwo_third"></canvas>
             </div>
           </div>
-        </div>
 
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 p-0 m-0">
-          <div class="cardtwo mt-2 mx-1">
-            <div class="ccheading-div mx-2 my-2">
-              <span class="ccheading">Change in Cost</span>
-              <span
-                ><i class="fas fa-undo-alt" style="margin-right: 5px"></i
-                ><i class="fas fa-expand"></i
-              ></span>
-            </div>
-            <hr style="margin: 0px" />
-            <div class="rowtwo_forth-canvasdiv">
-              <canvas id="rowtwo_forth"></canvas>
+          <!-- MODAL -->
+          <div class="container">
+            <!-- Button to Open the Modal -->
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal3">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Power Consumption</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <canvas id="rowtwo_third"></canvas>
+                  </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+
+          
+      
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 p-0 m-0 xx">
+            <div class="cardtwo mt-2 mx-1">
+              <div class="ccheading-div mx-2 my-2">
+                <span class="ccheading">Change in Cost</span>
+                <span
+                  ><i  class="fas fa-undo-alt" style="margin-right: 5px"></i
+                  ><i type="button"
+             
+                  data-toggle="modal"
+                  data-target="#myModal4" class="fas fa-expand"></i
+                ></span>
+              </div>
+              <hr style="margin: 0px" />
+              <div class="rowtwo_forth-canvasdiv">
+                <canvas id="rowtwo_forth"></canvas>
+              </div>
+            </div>
+
+               <!-- MODAL -->
+          <div class="container">
+            <!-- Button to Open the Modal -->
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal4">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Power Consumption</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <canvas id="rowtwo_forth"></canvas>
+                  </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
       </div>
+
+  
+
+      
 
       <div class="row row4 mx-1">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 p-0 m-0">
@@ -267,13 +432,53 @@
                   <option value="2">2019</option>
                   <option value="3">2018</option>
                 </select>
-                <i class="fas fa-expand"></i>
+                <i type="button"
+             
+                data-toggle="modal"
+                data-target="#myModal5" class="fas fa-expand"></i>
               </span>
             </div>
             <hr style="margin: 0px" />
             <div class="day-canvasdiv"><canvas id="day"></canvas></div>
           </div>
+
+              <!-- MODAL -->
+              <div class="container">
+                <!-- Button to Open the Modal -->
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal5">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Power Consumption</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                          &times;
+                        </button>
+                      </div>
+    
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <canvas id="day"></canvas>
+                      </div>
+                      </div>
+    
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
         </div>
+
+
         <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 p-0 m-0">
           <div class="months cardthree mt-2 mx-1">
             <div class="ccheading-div my-2">
@@ -285,12 +490,49 @@
                   <option value="2">2019</option>
                   <option value="3">2018</option>
                 </select>
-                <i class="fas fa-expand"></i>
+                <i type="button"
+             
+                data-toggle="modal"
+                data-target="#myModal6" class="fas fa-expand"></i>
               </span>
             </div>
             <hr style="margin: 0px" />
             <div class="months-canvasdiv"><canvas id="months"></canvas></div>
           </div>
+
+          <div class="container">
+            <!-- Button to Open the Modal -->
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal6">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Power Consumption</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <canvas id="months"></canvas>
+                  </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
         <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 p-0 m-0">
@@ -345,9 +587,13 @@
         </div>
       </div>
     </div>
-
-    <script></script>
+    </div>
 
     <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
